@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Belal Salama - Portfolio</title>
+    <title>Belal Salama - My Work</title>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -27,16 +28,28 @@
             z-index: 1000;
             transition: background-color 0.3s;
         }
-        .section {
-            padding: 80px 20px;
+        .hero {
+            padding: 120px 20px;
+            background-color: #1e1e1e;
+            box-shadow: 0 4px 10px rgba(245, 166, 35, 0.3);
             border-radius: 10px;
             margin: 80px auto 20px;
             max-width: 90%;
+        }
+        .hero h1 {
+            font-size: 36px;
+        }
+        .hero p {
+            font-size: 18px;
+            color: #ddd;
+        }
+        .section {
+            padding: 80px 20px;
+            border-radius: 10px;
+            margin: 20px auto;
+            max-width: 90%;
             background-color: #1e1e1e;
             box-shadow: 0 4px 10px rgba(245, 166, 35, 0.3);
-            opacity: 0;
-            transform: translateY(30px);
-            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
         }
         .button {
             background-color: #f5a623;
@@ -53,10 +66,6 @@
             background-color: #e6951e;
             transform: scale(1.05);
         }
-        .fade-in {
-            opacity: 1 !important;
-            transform: translateY(0) !important;
-        }
         .video-container {
             display: flex;
             flex-wrap: wrap;
@@ -66,18 +75,22 @@
         }
         .video-container iframe {
             width: 100%;
-            max-width: 100%;
-            height: auto;
-            aspect-ratio: 16 / 9;
+            max-width: 560px;
+            height: 315px;
             border-radius: 10px;
             box-shadow: 0 4px 10px rgba(245, 166, 35, 0.3);
+        }
+        .icon {
+            font-size: 40px;
+            margin-bottom: 10px;
+            color: #f5a623;
         }
         @media (max-width: 768px) {
             header {
                 font-size: 20px;
                 padding: 15px;
             }
-            .section {
+            .section, .hero {
                 padding: 60px 10px;
             }
             .button {
@@ -88,15 +101,22 @@
     </style>
 </head>
 <body>
-    <header id="header">Belal Salama - Portfolio</header>
+    <header>Belal Salama - My Work</header>
+    
+    <div class="hero">
+        <h1>Crafting Visual Stories</h1>
+        <p>High-impact motion graphics and video editing designed to captivate and engage. Let’s bring your vision to life.</p>
+    </div>
     
     <div class="section" id="about">
+        <i class="fas fa-user icon"></i>
         <h2>About Me</h2>
-        <p>I am a professional Motion Graphics Designer and Video Editor, delivering creative designs and high-quality video edits.</p>
+        <p>I am a professional Motion Graphics Designer and Video Editor with over 3 years of experience, creating high-quality visuals for clients in the Egyptian, Saudi, and Emirati markets. I specialize in crafting engaging and visually striking content that captivates audiences.</p>
     </div>
     
     <div class="section" id="portfolio">
-        <h2>Portfolio</h2>
+        <i class="fas fa-video icon"></i>
+        <h2>My Work</h2>
         <p>Here are some of my featured works.</p>
         <div class="video-container">
             <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID_1" allowfullscreen></iframe>
@@ -106,23 +126,11 @@
     </div>
     
     <div class="section" id="contact">
+        <i class="fas fa-envelope icon"></i>
         <h2>Contact Me</h2>
-        <p>You can reach me via email or WhatsApp.</p>
+        <p>Get in touch via email or WhatsApp.</p>
         <a href="mailto:belalsalama52@gmail.com" class="button">Email Me</a>
         <a href="https://wa.me/qr/GBNHKEGV3WLSF1" class="button">WhatsApp</a>
     </div>
-    
-    <script>
-        document.addEventListener("scroll", function() {
-            let sections = document.querySelectorAll(".section");
-            sections.forEach(section => {
-                let position = section.getBoundingClientRect().top;
-                let windowHeight = window.innerHeight;
-                if (position < windowHeight - 100) {
-                    section.classList.add("fade-in");
-                }
-            });
-        });
-    </script>
 </body>
 </html>
